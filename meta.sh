@@ -24,7 +24,7 @@ keypairname=$(echo $keypairattached | sed 's/0=//')
 volumesize=$(df -hT | grep '/dev/x.' | awk '{print $3}')
 hash=$(echo "#######")
 
-
+echo -e "\n\n\n"
 echo "###################################"
 echo "###  Instance Meta-data Script  ###"
 echo "###################################"
@@ -48,5 +48,5 @@ echo "VPC CIDR 				$hash			$vpccidr"
 echo "Availability Zone 			$hash			$az"
 echo "Virtualization Type			$hash			$virtualizationtype" 
 echo "KeyPair Name 				$hash			$keypairname"
-
+echo "IAM policiy attached" 			$hash 			$iamrolepolicy"
 echo -e "\n\n\n\\n"
