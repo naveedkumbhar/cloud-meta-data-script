@@ -11,45 +11,7 @@ Sample Output:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instance Meta-data Script</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            font-size: 24px;
-        }
-        .meta-data {
-            margin-top: 20px;
-        }
-        .meta-data div {
-            margin: 5px 0;
-            padding: 5px;
-            border-bottom: 1px solid #eaeaea;
-        }
-        .meta-data div:last-child {
-            border-bottom: none;
-        }
-        .label {
-            font-weight: bold;
-            color: #333333;
-        }
-        .value {
-            color: #666666;
-        }
-    </style>
-</head>
+    <tit</head>
 <body>
     <div class="container">
         <h1>Instance Meta-data Script</h1>
