@@ -1,6 +1,6 @@
 #!/bin/bash
 amiid=$(wget -q -O - 169.254.169.254/latest/meta-data/ami-id)
-ebsblock=$(wget -q -O - 169.254.169.254/latest/meta-data/block-device-mapping/ami)
+ebsblock=$(lsblk |grep disk | awk '{print "/dev/"$1}')
 hostname=$(wget -q -O - 169.254.169.254/latest/meta-data/hostname)
 iamrolepolicy=$(wget -q -O - 169.254.169.254/latest/meta-data/iam/info)
 iamroleattached=$(wget -q -O - 169.254.169.254/latest/meta-data/iam/security-credentials/ec2codedep) 
@@ -21,7 +21,7 @@ virtualizationtype=$(wget -q -O - 169.254.169.254/latest/meta-data/profile/defau
 publicip=$(wget -q -O - 169.254.169.254/latest/meta-data/public-ipv4)
 keypairattached=$(wget -q -O - 169.254.169.254/latest/meta-data/public-keys/) 
 keypairname=$(echo $keypairattached | sed 's/0=//')
-volumesize=$(df -hT | grep '/dev/x.' | awk '{print $3}')
+volumesize=$(lsblk |grep disk | awk '{print $4}')
 hash=$(echo "#######")
 
 echo -e "\n\n\n"
@@ -46,7 +46,6 @@ echo "Subnet CIDR 				$hash			$subnetcidr"
 echo "VPC ID 					$hash			$vpcid"
 echo "VPC CIDR 				$hash			$vpccidr"
 echo "Availability Zone 			$hash			$az"
-echo "Virtualization Type			$hash			$virtualizationtype" 
 echo "KeyPair Name 				$hash			$keypairname"
-echo "IAM policiy attached" 			$hash 			$iamrolepolicy"
-echo -e "\n\n\n\\n"
+echo -e "\n\n\n\n"
+
