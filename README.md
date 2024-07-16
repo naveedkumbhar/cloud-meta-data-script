@@ -15,11 +15,13 @@ This repository contains bash scripts to retrieve and display metadata from inst
 
 ### Usage
 
-#### 1. AWS Instance Metadata
+
+```bash
+
+1. AWS Instance Metadata
 
 This script fetches metadata from an AWS instance.
 
-```bash
 chmod +x get_aws_instance_metadata.sh
 ./get_aws_instance_metadata.sh
 
