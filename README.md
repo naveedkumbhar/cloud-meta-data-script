@@ -40,7 +40,7 @@ chmod +x get_azure_instance_metadata.sh
 ./get_azure_instance_metadata.sh
 
 
-cript Details
+Script Details
 get_aws_instance_metadata.sh
 This script retrieves metadata such as instance ID, instance type, public and private IP addresses, and more from an AWS instance using the instance metadata service.
 
